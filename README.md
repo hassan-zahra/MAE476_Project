@@ -17,7 +17,7 @@ Processing communicates the desired values to Arduino over Serial using the form
 **Temperature**
 
 1. The thermistor calculates the current temperature
-2. Based on the values of the desired temperature, mode switch temp (MST), and tolerance (tol, MST > tol),
+2. Based on the values of the desired temperature, mode switch temp (MST, this is a user set boundary between high and low fan speed), and tolerance (tol, MST > tol),
    * If the current temp exceeds the desired temp by a value between tol and MST, the fan is turned on at the low speed setting
    * If the current temp exceeds the desired temp by a value greater than MST, the fan is set to the high setting
    * Otherwise the fan does not turn on.
@@ -28,6 +28,12 @@ Processing communicates the desired values to Arduino over Serial using the form
 1. The LDR measures the current brightness in the room.
 2. This value is inversely mapped to a PWM value (The bounds for max/min intensity can be set by the user).
 3. The light percentage value from Processing then scales the brightness and it is sent to the LED.
+
+**Running the Code**
+1. Upload the Arduino sketch
+2. Run the Processing sketch
+3. Connect to the proper serial port
+4. Adjust any values if necessary
 
 **Hardware Setup**
 
@@ -63,5 +69,5 @@ Refer to the image below for the wiring diagram
 *Limitations*
 - Most importantly, I am not aware of a viable heating element that would be safe in this setup so there is only a cooling system.
 - There is also a concern with noise as when the temperature reading fluctuates above and below the desired temp, the motor can keep turning on and off.
-- There is some required setup for the thresholds of the sensors which must be determined experimentally and can change for the same box in a different environment.
-- The sensors only measure values at a single point which may mot be accurate for the whole space. For a small box this is not a big issue but is still present to some extent.
+- There is some required setup for the thresholds of the sensors which must be determined experimentally and can change depending on the environment.
+- The sensors only measure values at a single point which may not be accurate for the whole space. For a small box this is not a big issue but is still present to some extent.
