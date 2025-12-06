@@ -58,7 +58,7 @@ Note: this setup assumes you are using a rectangular cardboard box. The top and 
 **Wiring setup**
 
 Refer to the image below for the wiring diagram
-<img width="1470" height="823" alt="Smart Bedroom Wiring Diagram" src="https://github.com/user-attachments/assets/6cba3280-4b49-4898-91d7-dbfeb85600e1" />
+<img width="1470" height="823" alt="Terrific Jaiks (1)" src="https://github.com/user-attachments/assets/af6845d4-4799-4f11-b0b6-3b645f37ded6" />
 
 *Limitations*
 - Most importantly, I am not aware of a viable heating element that would be safe in this setup so there is only a cooling system.
